@@ -16,7 +16,7 @@ export default function Home() {
       <ul>
         {slugs.map((slug) => (
           <li key={slug}>
-            <Link href={`/docs/${slug}`}>
+            <Link href={`/content/${slug}`}>
               {slug.replace(/-/g, " ")}
             </Link>
           </li>
