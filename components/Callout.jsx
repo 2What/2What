@@ -1,11 +1,27 @@
 // components/Callout.jsx
-// react for callout
+// earth tone version
 
 const styles = {
-  note:    { background: "#e8f4fd", border: "#3b82f6", label: "Note" },
-  warning: { background: "#fef9e7", border: "#f59e0b", label: "Warning" },
-  tip:     { background: "#e6f9f0", border: "#10b981", label: "Tip" },
-  danger:  { background: "#fdecea", border: "#ef4444", label: "Danger" },
+  note: {
+    background: "#f5efe6",   // sand
+    border: "#8b5e34",       // warm brown
+    label: "Note"
+  },
+  warning: {
+    background: "#f3e6d3",   // light tan
+    border: "#c27c2c",       // ochre
+    label: "Warning"
+  },
+  tip: {
+    background: "#e8efe3",   // soft sage
+    border: "#6b8e23",       // olive green
+    label: "Tip"
+  },
+  danger: {
+    background: "#f2e3dc",   // dusty clay
+    border: "#a44a3f",       // muted red-brown
+    label: "Danger"
+  },
 };
 
 export function Callout({ type = "note", children }) {
@@ -19,6 +35,7 @@ export function Callout({ type = "note", children }) {
         padding: "12px 16px",
         borderRadius: "4px",
         margin: "1.5rem 0",
+        color: "#3e2f1c", // consistent text brown
       }}
     >
       <strong style={{ color: border }}>{label}: </strong>
