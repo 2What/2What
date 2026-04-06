@@ -35,7 +35,7 @@ Neither of these endpoints is officially documented. Their behavior has been rev
 
 With our two endpoints in hand, the next question is: whose comments do we actually pull? This is an interesting problem. Do you target the best creators because they may have encountered the most levels, or the best players because they've beaten so many? My approach was to use the Geometry Dash moderators list. This group has already been tasked with finding the best levels, making them an ideal starting point.
 
-Conveniently, the list of all current and past moderators is publicly available at [geometrydashmoderators.jimdofree.com](https://geometrydashmoderators.jimdofree.com/home/gd-moderators-list/). From there, the next step is obtaining each moderator's `playerID` to pass to `getGJCommentHistory`. While this can be fetched via another server request, making excessive requests isn't great for avoiding rate limites, so I opted to manually pull a list of `playerID`s once from [GDBrowser.com](https://gdbrowser.com) and save them locally to go through.
+Conveniently, the list of all current and past moderators is publicly available at [geometrydashmoderators.jimdofree.com](https://geometrydashmoderators.jimdofree.com/home/gd-moderators-list/). From there, the next step is obtaining each moderator's `playerID` to pass to `getGJCommentHistory`. While this can be fetched via another server request, making excessive requests isn't great for avoiding rate limits, so I opted to manually pull a list of `playerID`s once from [GDBrowser.com](https://gdbrowser.com) and save them locally to go through.
 
 ### Making the Request
 
@@ -106,7 +106,7 @@ This returns a list of dict objects representing each level. The actual response
 
 ### The Grand Reveal
 
-By joining this level data with our earlier comment list, we can also see what the moderator who left the comment actually said about the level — providing an additional layer of filtering. If the comment was negative, that level can be likely be ignored, leaving us with a specialized list of levels to actually look into.
+By joining this level data with our earlier comment list, we can also see what the moderator who left the comment actually said about the level. If the comment was negative, that level can be likely be ignored, leaving us with a specialized list of levels to actually look into.
 
 So, where did this get us? Actually pretty far, about a year and half ago I started a shortlived YouTube channel to show the results of this method. I did wind up finding quite a few gems, my personal favorite being *Monsters II* by - and the entire catalog of Kreed, who somehow has no rates after multiple really cool levels. You can find the few videos I did upload at [Level Catalog](https://www.youtube.com/@LevelCatalog), which also includes a few other oddities. Maybe some day I'll get back to uploading over there. 
 
