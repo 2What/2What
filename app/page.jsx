@@ -22,6 +22,12 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <h1>Projects</h1>
+      <ul>
+        <li>
+        <a href="">Serial</a>
+        </li>
+      </ul>
     </main>
   );
 }
